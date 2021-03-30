@@ -1,0 +1,38 @@
+body {
+    background: #e2ba2d;
+}
+
+.footer {
+    display: flex; 
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    
+    background: linear-gradient(180deg, #631F1F 0%, #9F0D0D 79.17%, #000000 100%), #FD2B2B;
+    transform: rotate(-180.00deg);
+}
+
+.header {
+    display: flex; 
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100px;
+
+    background: rgba(85, 82, 5, 0.795);
+    font-family: Spinnaker;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+
+    color: #FFFFFF;
+}
+
+.text {
+    left: 50px;
+}
