@@ -52,5 +52,63 @@ body {
 
 .moneybutton {
     position: fixed;
-    z-index:100;
+    z-index:100;  
+}
+
+.btn {
+    
+    top: 75%;
+    left: 35%;
+    height: 150px;
+    width: 150px;
+    position: fixed;
+    z-index:200;
+    border-radius: 100%;
+}
+
+.container{    
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-size:50px;
+    display: flex;
+    left: 39.5%;
+    top: 45%;
+    position: fixed;
+    z-index:200;
+
+}
+
+.firstnum {
+    /* top: 60%;
+    left: 40%;
+    height: 250px;
+    width: 150px; */
+    /* order:-1;
+    z-index:200; */
+    margin: 55px;
+    
+}
+
+.secondnum{
+    /* top: 60%;
+    left: 48%;
+    height: 250px;
+    width: 150px; */
+    /* order: 0;
+    z-index:200; */
+    margin: 55px;
+
+    
+
+}
+
+.thirdnum{
+    /* top: 60%;
+    left: 56%;
+    height: 250px;
+    width: 150px; */
+    /* left: 56%;
+    order: 1;
+    z-index:200; */
+    margin: 55px;
+
 }
