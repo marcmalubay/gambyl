@@ -1,30 +1,42 @@
 // sup
 'use strict'
 
+const money = document.getElementById("btn");
+money.onclick = function() {myFunction()};
 
-const money = document.querySelector('.btn');
+const moneybutton = document.getElementById("moneybutton");
+moneybutton.onclick = function() {getMoney()};
+
+const pointcounter = document.querySelector('.pointcounter');
 const firstnum = document.querySelector('.firstnum');
 const secondnum = document.querySelector('.secondnum');
 const thirdnum = document.querySelector('.thirdnum');
-var rollcount =0;
+const flash = document.querySelector('.flash');
+
+
+
+var rollcount =3;
 var jamal = 0;
 var time;
-var rollcount2 =0;
+var rollcount2 =2;
 var jamal2 = 0;
 var time2;
-var rollcount3 =0;
+var rollcount3 =5;
 var jamal3 = 0;
 var time3;
-
+var points = 0;
 var gamblecount = 0;
 
+function getMoney() {
+    points +=500;
+    pointcounter.textContent = "your points: " + points;
+}
 
-money.addEventListener('click', function() {
+function myFunction() {
     gamblecount+=1;
-
+// gamble count 
     if (gamblecount > 5) {
         alert("get help. \n call this. \n 1-800-522-4700");
-        money.disabled = true;
         
     }
     // box 1
@@ -150,15 +162,45 @@ function myStopFunction4() {
     clearInterval(NLE3);
 }
 
- console.log(rollcount2)
-
-
-
-
-
-
 // end of box 3
-})
+var checker = setInterval(rollchecker,1);
+function rollchecker(){
+    if (time3 == 0 && time2 == 0 && time == 0 && rollcount3 + rollcount2 + rollcount > 10) {
+        console.log(time);
+        console.log(time2);
+        console.log(time3);
+        points+=100;
+        pointcounter.textContent = "your points: " + points;
+        flash.textContent = "YOU WIN";
+        clearInterval(checker);
+    }
+
+
+}
+
+var animater = setInterval(animate,100); 
+var animatecount = 0;
+function animate(){
+    flash.textContent = "";
+    animatecount+=1;
+    if (time3 == 0 && time2 == 0 && time == 0 > rollcount3 + rollcount2 + rollcount > 10) {
+
+   
+    if (animatecount%2 == 0) {
+    flash.textContent = "YOU WIN";
+    } 
+    if (animatecount >= 45) {
+        flash.textContent = "YOU WIN";
+        clearInterval(animater);
+    }
+} 
+
+}
+
+
+}
+
+
 
 firstnum.addEventListener('click', function() {
     
@@ -169,3 +211,10 @@ secondnum.addEventListener('click', function() {
 thirdnum.addEventListener('click', function() {
     
 })
+pointcounter.addEventListener('click', function() {
+
+})
+flash.addEventListener('click', function() {
+
+})
+

@@ -27,7 +27,7 @@ body {
 
 }
 
-.text1 {
+.pointcounter {
     position: fixed;
     top: 1.5%;
     left: 85%;
@@ -48,22 +48,28 @@ body {
     display: flex; 
     justify-content: center;
     
+    
 }
 
-.moneybutton {
+.getbutton {
     position: fixed;
     z-index:100;  
 }
 
-.btn {
+#moneybutton {
+    position: fixed;
+    z-index:200;  
+}
+
+.gamblebutton {
     
     top: 75%;
     left: 35%;
-    height: 150px;
-    width: 150px;
     position: fixed;
     z-index:200;
     border-radius: 100%;
+
+
 }
 
 .container{    
@@ -78,37 +84,26 @@ body {
 }
 
 .firstnum {
-    /* top: 60%;
-    left: 40%;
-    height: 250px;
-    width: 150px; */
-    /* order:-1;
-    z-index:200; */
     margin: 55px;
     
 }
 
 .secondnum{
-    /* top: 60%;
-    left: 48%;
-    height: 250px;
-    width: 150px; */
-    /* order: 0;
-    z-index:200; */
-    margin: 55px;
-
-    
+    margin: 55px;    
 
 }
 
 .thirdnum{
-    /* top: 60%;
-    left: 56%;
-    height: 250px;
-    width: 150px; */
-    /* left: 56%;
-    order: 1;
-    z-index:200; */
     margin: 55px;
+
+}
+.flash{
+    color:white;
+    font-family:'Times New Roman', Times, serif;
+    font-size: 50px;
+    position:fixed;
+    left: 45%;
+    top: 10%;
+    z-index: 250;
 
 }
