@@ -1,11 +1,23 @@
-body {
-    background: #e2ba2d;
-}
 
+body {
+    /* background: #e2ba2d; */
+   background: linear-gradient(180deg, #000000 0%, #E2BA2D 10.42%, #E2BA2D 65.1%, #000000 100%), #E2BA2D;
+} 
+
+@font-face {
+    font-family: 'spinnakerregular';
+    src: url('spinnaker-regular-webfont.woff2') format('woff2'),
+         url('spinnaker-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+  
 .footer {
     display: flex; 
     justify-content: center;
     position: fixed;
+    z-index: 0;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -16,7 +28,6 @@ body {
 }
 
 .header {
-    display: flex; 
     position: fixed;
     left: 0;
     top: 0;
@@ -28,82 +39,246 @@ body {
 }
 
 .pointcounter {
-    position: fixed;
-    top: 1.5%;
-    left: 85%;
-    font-family: Spinnaker;
+    display: flex;
+    font-family: 'spinnakerregular';
     font-style: normal;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 20px;
     color: #FFFFFF;
+    z-index: 2;
 }
 
 .img {
-
+    position:fixed;
     bottom: 20px;
+    right: 50px;
     width: 100%;
-    position: fixed;
-    z-index: 100;
+    z-index: 4;
     display: flex; 
     justify-content: center;
-    
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     
 }
 
 .getbutton {
     position: fixed;
-    z-index:100;  
+    z-index:4;  
 }
 
-#moneybutton {
-    position: fixed;
-    z-index:200;  
+/* get money button */
+.getmoney {
+    z-index:5;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
-
-.gamblebutton {
+.gmtimer {
+    z-index: 5;
+    position:fixed;
+    left: 1%;
+    top: 10%;
+    color: white;
+    font-family: 'spinnakerregular';
+    font-size: 30px;
     
-    top: 75%;
-    left: 35%;
-    position: fixed;
-    z-index:200;
-    border-radius: 100%;
-
-
 }
-
-.container{    
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-size:50px;
+#moneybutton {
     display: flex;
-    left: 39.5%;
-    top: 45%;
-    position: fixed;
-    z-index:200;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+ #moneybutton:hover {
+    content:url("images/moneybuttonhovered.png");
+} 
 
+/* end of get money button */
+
+/* top bar container */
+.topbar {
+    display: flex;
+    height: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
+/* end of top bar container */
+
+/* boxes for slot */
 .firstnum {
-    margin: 55px;
+    margin: 25px;
+    min-width: 4vw;
+    min-height: 4vw;
+    max-width: 4vw;
+    max-height: 4vw;
     
 }
 
 .secondnum{
-    margin: 55px;    
-
+    margin: 25px;  
+    min-width: 4vw; 
+    min-height: 4vw;
+    max-width: 4vw;
+    max-height: 4vw;
 }
 
-.thirdnum{
-    margin: 55px;
 
+.thirdnum {
+    margin: 25px;
+    min-width: 4vw;
+    min-height: 4vw;
+    max-width: 4vw;
+    max-height: 4vw;
 }
+/* end of slot boxes */
+
+ /* you win message */
+
 .flash{
     color:white;
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'spinnakerregular';
+    position: absolute;
     font-size: 50px;
-    position:fixed;
-    left: 45%;
-    top: 10%;
-    z-index: 250;
+    z-index: 5;
 
+}
+
+.bottombar {
+    margin: 30px;
+    display: flex;
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    z-index: 5;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+/* end of you win message */
+/* slot machine stuffs */
+.bottombar1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    z-index: 5;
+    height: 200px; 
+    margin: 180px;
+}
+.container{    
+    position: absolute;
+    display:flex;
+    top: 375px;
+    left: 145px;
+ 
+    z-index:200;
+
+}
+
+/* end of slot */
+/* levers */
+
+
+#uplever{
+    position: relative;
+    top: 400px;
+    left: 35%;
+    z-index: 6;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+#uplever:hover {   
+    content:url("images/slotMachineAnimations/leverhover.png");
+    z-index: 6;
+
+}
+
+.middlelever{
+    position: relative;
+    z-index: 6;
+    top: 67%;
+    left: 35%;
+
+}
+
+.downlever{
+    position: relative;
+    z-index: 6;  
+    top: 70%;
+    left: 35%;
+
+
+}
+.slotimage {
+    position:relative;
+
+}
+
+#slatt {
+    position:relative;
+}
+/* end of levers */
+
+/* jukebox */
+.jukebox {
+    display: flex;
+    flex-direction: column;
+    margin: 220px;
+    margin-top: -350px;
+    height: 75px;
+    width: 75px;
+
+}
+.musicbox {
+    display: flex;
+    justify-content: center;
+    left: 5%;
+    top: 35%;
+    position: fixed;
+}
+#pause {
+    z-index:6;
+}
+
+#play {
+    z-index:6;
+}
+
+#skip {
+    z-index:6;
+}
+/* jukebox */
+
+
+/* score stuffs */
+
+.scoretable {
+    left: 75%;
+    top: 15%;
+    position: fixed;
+    z-index: 7;
+    font-size: 25px;
+    color: white;
+    font-style: 'spinnakerregular';
 }

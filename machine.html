@@ -5,43 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel  ="stylesheet" href ="jmal1.css">
-    <title>machine</title>
+    <title>Gambyl - Machine</title>
 </head>
-<body>
+<body onload = "get_scores(list_scores)">
     <div class="footer">
         <p></p>
-    </div>
+    </div> 
 
     <div class ="header">
-    </div>
-
-    <div class ="pointcounter">
-        <p></p>
+    </div> 
+    <div class = "scoretable">
+    <form id="myform">
+        Your name:<br>
+        <input name="player_name" maxlength="20" class="greenBut" type="text" id="player_name" placeholder="Type Your Name" required>
+        <br>Your count:<br>
+        <input name="player_score" class="greenBut" type="number" value=0 id="score" readonly></input><br></h3>
+        <button type="submit" class="greenBut">Log (only once!)</button>
+      </form>
+      <h2>Highest Points</h2>
+      <div id="error"></div>
+      <ol id="highscores"></ol>
+      <input id="lowscores" type="hidden">
     </div>
 
     <div class = "img">
-        <img src = "images/slatt.png" alt =""></img>
+ 
+        <div class = "levers">
+    
+            <img id = "uplever" src= "images/slotMachineAnimations/slotmachineup.png" alt = "" onclick = "click"></img>
+            <img class = "middlelever" src = "images/slotMachineAnimations/slotmachinemiddle.png" alt = ""></img>
+            <img class = "downlever" src = "images/slotMachineAnimations/slotmachinedown.png" alt = ""></img>
+        </div>
+        <div class = "slotimage">
+            <img id = "slatt" src = "images/slatt.png" alt =""></img>   
+            <div class = "container">
+
+                <img class = "firstnum" src = "transparent.png"alt =""></img> 
+                <img class = "secondnum" src = "transparent.png"alt =""></img> 
+                <img class = "thirdnum" src = "transparent.png"alt =""></img> 
+            </div>
+        </div>
     </div>
 
-    <div class = "getmoney">
-        <img id ="moneybutton" src = "images/moneybutton.png" alt = "" onclick = "click"></img>
+    <div class = "topbar">
+        <div class = "getmoney">
+            <img id ="moneybutton" src = "images/moneybutton.png" alt = "" onclick = "click"></img>
+        </div>
+  
+         <div class ="pointcounter">
+            <p></p>
+        </div>
     </div>
 
-    <div class = "gamblebutton">
-        <img id = "btn" src = "images/gamblebutton.png" alt = "" onclick = "click"></img>
+
+       <div class = "gmtimer">
+            <p> </p>
+        </div>      
+
+
+    <div class = "bottombar">
+        <p class = "flash">
+        </p>
     </div>
 
-    <div class = "container">
-
-        <p class = "firstnum"></p>
-        <p class = "secondnum"></p>   
-        <p class = "thirdnum"></p>
+    <div class = "bottombar1">
 
     </div>
+     
+    <img class = "musicbox" src = "images/jukebox.png" alt = ""></img>
 
-    <p class = "flash">
-    </p>
-
+        <div class = "jukebox">
+            <img id = "play" src = "images/play.png" alt = "" onclick = "click"></img>
+            <img id = "pause" src = "images/pause.png" alt ="" onclick = "click"></img>
+            <img id = "skip" src = "images/skip.png" alt ="" onclick = "click"></img> 
+            
+        </div>
     <script src="apps.js"></script> 
 </body>
 </html>

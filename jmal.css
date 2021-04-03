@@ -1,23 +1,33 @@
+html, body {margin: 0; height: 100%; overflow: hidden}
+
 body {
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0px;
-  top: 0px;
-  background: blue;
-  transform: matrix(1, 0, 0, 1, 0, 0);
-  overflow: hidden;
+  background: linear-gradient(180deg, #5C78C2 0%, #6C72CB 54.69%, #664EC6 100%), #C4C4C4;
 }
 
 #image1 {
-  width:auto;
   max-height: 100%; 
+  z-index: 5;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
 } 
 
+#enter {
+  left: 38.5%;
+  top: 70%;
+  position:fixed;
+  z-index: 6;
+}
+
+
+#enter:hover{
+  content:url("images/enterhovered.png");
+}
 .homepagepicture{
   display: flex; 
   justify-content: center;
+  z-index: 5;
 }
 
